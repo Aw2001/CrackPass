@@ -23,7 +23,7 @@ public class PasswordBreakers {
 
     public static void AttackDictionMDP(String PasswordAD){
         Scanner y = new Scanner(System.in);
-        File file = new File("dictionnaire.txt");
+        File file = new File("dictionnaireH.txt");
         Scanner scanner;
         try {
             scanner = new Scanner(file);
