@@ -9,12 +9,16 @@
     // Exemple de réponse :
     if ($login === 'beuguebakh' && $password === 'mouridesadikh') {
 
-      echo 'Connexion réussie !';
+      $message = 'Connexion réussie !';
 
     } else {
 
-      echo 'Identifiants invalides. Veuillez réessayer.';
+      $message = 'Identifiants invalides. Veuillez réessayer.';
       
     }
+   
+    echo "<h3>$message</h3>";
   }
+ 
 ?>
+
