@@ -7,7 +7,7 @@
     // par exemple, vérifier les informations dans une base de données
 
     // Exemple de réponse :
-    if ($login === 'beuguebakh' && $password === 'bass') {
+    if ($login === 'beuguebakh' && $password === 'aba') {
 
       $message = 'ConnexionReussie';
 
