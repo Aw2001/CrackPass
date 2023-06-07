@@ -11,7 +11,7 @@ public class Home {
 
     public static void main(String[] args) throws Exception {
 
-        char[] chaine = new char[3];
+        char[] chaine = new char[5];
         int position = 0;
         Scanner scanner = new Scanner(System.in);
 
