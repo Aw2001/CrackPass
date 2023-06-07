@@ -7,17 +7,17 @@
     // par exemple, vérifier les informations dans une base de données
 
     // Exemple de réponse :
-    if ($login === 'beuguebakh' && $password === 'mouridesadikh') {
+    if ($login === 'beuguebakh' && $password === 'bass') {
 
-      $message = 'Connexion réussie !';
+      $message = 'ConnexionReussie';
 
     } else {
 
-      $message = 'Identifiants invalides. Veuillez réessayer.';
+      $message = 'invalide';
       
     }
    
-    echo "<h3>$message</h3>";
+    echo $message;
   }
  
 ?>
