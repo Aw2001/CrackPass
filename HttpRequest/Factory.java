@@ -3,29 +3,41 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Factory {
-    public static String bruteForceCracker(char[] chaine, int position) throws Exception {    
-        // Lorsqu'on arrive à la dernière position de la chaîne
-        if (position == chaine.length - 1) {
-            // On parcourt les différentes lettres de l'alphabet pour la dernière position
-            for (int i = 97; i < 123; i++) {
+
+    public static String bruteForceCracker(char[] chaine, int position) throws Exception{
+
+        //lorsqu'on arrive à la dernière position de la chaine
+        if(position == chaine.length - 1) {
+
+            //On parcourt les différentes lettres de l'alphabet pour la dernière position
+            for(int i = 97; i < 123; i++) {
+
                 chaine[position] = decoderLaLettre(i);
                 String motTrouve = new String(chaine);
                 int response_requete = Request.requete(motTrouve);
                 if (response_requete == 5) {
-                    System.out.println("Mot de passe trouvé : " + motTrouve);
+
                     return motTrouve;
+
                 }
             }
             return null;
-        } else {
-            for (int i = 97; i < 124 - 1; i++) {
+        //Si la dernière position n'est pas atteinte  
+        }else {
+
+            for(int i = 97; i < 124 - 1; i++) {
+
                 chaine[position] = decoderLaLettre(i);
-                if (bruteForceCracker(chaine, position + 1) != null) {
+                if(bruteForceCracker(chaine, position + 1) != null) {
+
                     return new String(chaine);
+
                 }
+                
             }
             return null;
         }
+
     }
 
     public static char decoderLaLettre(int codeAscii) {
